@@ -1,0 +1,25 @@
+import numpy
+
+def stdDevOfLengths(L):
+    """
+    L: a list of strings
+
+    returns: float, the standard deviation of the lengths of the strings,
+      or NaN if L is empty.
+    """
+    
+    length = []
+    
+    if len(L) == 0:
+        return float('NaN')
+      
+    if len(L) > 0: 
+        elements = len(L)
+          
+        for l in L:
+            length.append(len(l))
+      
+    standard_dev = numpy.std(length)
+    return standard_dev
+
+print stdDevOfLengths(['apples', 'oranges', 'kiwis', 'pineapples'])
